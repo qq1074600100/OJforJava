@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.maple.oj.dao.QuestionMapper">
+    <select id="getAllQuestionInfoPath" resultType="com.maple.oj.beans.QuestionInfoPath">
+        SELECT id,questionPath,modelPath
+        FROM questioninfo
+        ORDER BY id
+    </select>
+    <select id="getQuestionInfoPathById" parameterType="java.lang.Integer"
+            resultType="com.maple.oj.beans.QuestionInfoPath">
+        SELECT id,questionPath,modelPath
+        FROM questioninfo
+        WHERE id=#{0}
+    </select>
+    <select id="getTestCasePathById" parameterType="java.lang.Integer"
+            resultType="java.lang.String">
+        SELECT path
+        FROM questioninfo LEFT JOIN testcase
+        ON questioninfo.testId=testcase.testId
+        WHERE id=#{0}
+    </select>
+    <insert id="insertAnswer" parameterType="com.maple.oj.beans.Answer">
+        INSERT INTO answer(commitTime,correct,msg,qId,uId)
+        VALUES (#{commitTime},#{correct},#{msg},#{qId},#{uId})
+    </insert>
+    <select id="selectAnswerByUId" resultType="com.maple.oj.beans.Answer">
+        SELECT commitTime,correct,questionPath,msg
+        FROM answer,questioninfo
+        WHERE answer.qId=questioninfo.id AND
+              uId=#{0}
+        ORDER BY commitTime ASC
+    </select>
+</mapper>

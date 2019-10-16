@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+<title>OJ</title>
+</head>
+<body>
+<div th:include="header::#head"></div>
+<h1>Result</h1>
+<div>
+    <h4 th:if="${answer eq true}">运行成功</h4>
+    <h4 th:if="${answer eq false}">运行失败</h4>
+</div>
+<hr/>
+<div>
+    <h4 th:if="${time ne null}">该程序消耗的时间是</h4>
+    <h4 th:text="${time}">时间消耗</h4>
+</div>
+<div>
+    <h4 th:utext="${error}">错误信息</h4>
+</div>
+<hr/>
+<div>
+    <a th:href="@{'/oj/'+${id}}">重做本题</a><br/>
+    <a th:href="@{'/'}">选下一题</a>
+</div>
+
+</body>
+</html>

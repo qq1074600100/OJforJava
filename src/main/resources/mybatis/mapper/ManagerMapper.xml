@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.maple.oj.dao.ManagerMapper">
+    <select id="selectAllId" resultType="java.lang.Integer">
+        SELECT id
+        FROM questioninfo
+    </select>
+    <delete id="deleteQuestionInfoById">
+        DELETE FROM questioninfo
+        WHERE id=#{0}
+    </delete>
+    <insert id="insertQuestionInfo" parameterType="com.maple.oj.beans.QuestionInfoPath">
+        INSERT INTO questioninfo(id,questionPath, modelPath,testId)
+        VALUES (#{id},#{questionPath},#{modelPath},#{id})
+    </insert>
+    <insert id="insertTestCase">
+        INSERT INTO testcase(testId, path)
+        VALUES (#{testId},#{path})
+    </insert>
+</mapper>
