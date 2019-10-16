@@ -12,16 +12,16 @@
 >pom.xml：管理maven<br/>
 >src：源码<br/>
 >>main：源码<br/>
-sdas
+>>test：测试程序<br/>
 >>>java：java代码<br/>
+>>>resources：资源及配置文件<br/>
 >>>>beans：实体类<br/>
 >>>>common：一些公用类，包括一些自定义异常，用于传递信息<br/>
 >>>>configure：spring boot的java配置类<br/>
 >>>>interceptor：拦截器<br/>
 >>>>utils：工具类<br/>
 >>>>controllor、service、dao三层建构web<br/>
->>>resources：资源及配置文件<br/>
 >>>>mybatis：mybatis相关配置及mapper文件<br/>
 >>>>templates：thymeleaf模板<br/>
 >>>>application.properties：spring boot配置文件<br/>
->>test：测试程序<br/>
+
