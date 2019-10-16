@@ -1,5 +1,5 @@
 # OJforJava
-###一个web项目，实现在线判题系统。
+一个web项目，实现在线判题系统。
 
 功能：<br/>
 >实现了用户管理，需要登录，并且区分用户和管理员，管理员可以增加新的管理员账户，也可以增加题目，或删除题目。<br/>
@@ -11,16 +11,16 @@
 >testCase：存储每道题目的测试用例<br/>
 >pom.xml：管理maven<br/>
 >src：源码<br/>
-  >>main：源码<br/>
-    >>>java：java代码<br/>
-      >>>>beans：实体类<br/>
-      >>>>common：一些公用类，包括一些自定义异常，用于传递信息<br/>
-      >>>>configure：spring boot的java配置类<br/>
-      >>>>interceptor：拦截器<br/>
-      >>>>utils：工具类<br/>
-      >>>>controllor、service、dao三层建构web<br/>
-    >>>resources：资源及配置文件<br/>
-      >>>>mybatis：mybatis相关配置及mapper文件<br/>
-      >>>>templates：thymeleaf模板<br/>
-      >>>>application.properties：spring boot配置文件<br/>
-  >>test：测试程序<br/>
+>>main：源码<br/>
+>>>java：java代码<br/>
+>>>>beans：实体类<br/>
+>>>>common：一些公用类，包括一些自定义异常，用于传递信息<br/>
+>>>>configure：spring boot的java配置类<br/>
+>>>>interceptor：拦截器<br/>
+>>>>utils：工具类<br/>
+>>>>controllor、service、dao三层建构web<br/>
+>>>resources：资源及配置文件<br/>
+>>>>mybatis：mybatis相关配置及mapper文件<br/>
+>>>>templates：thymeleaf模板<br/>
+>>>>application.properties：spring boot配置文件<br/>
+>>test：测试程序<br/>
