@@ -11,16 +11,16 @@ questions：存储每道题的题目描述。<br/>
 testCase：存储每道题目的测试用例<br/>
 pom.xml：管理maven<br/>
 src：源码<br/>
-  <PRE>&#9</PRE>main：源码<br/>
-    <PRE>&#9</PRE><PRE>&#9</PRE>java：java代码<br/>
-      <PRE>&#9</PRE><PRE>&#9</PRE><PRE>&#9</PRE>beans：实体类<br/>
-      <PRE>&#9</PRE><PRE>&#9</PRE><PRE>&#9</PRE>common：一些公用类，包括一些自定义异常，用于传递信息<br/>
-      <PRE>&#9</PRE><PRE>&#9</PRE><PRE>&#9</PRE>configure：spring boot的java配置类<br/>
-      <PRE>&#9</PRE><PRE>&#9</PRE><PRE>&#9</PRE>interceptor：拦截器<br/>
-      <PRE>&#9</PRE><PRE>&#9</PRE><PRE>&#9</PRE>utils：工具类<br/>
-      <PRE>&#9</PRE><PRE>&#9</PRE><PRE>&#9</PRE>controllor、service、dao三层建构web<br/>
-    <PRE>&#9</PRE><PRE>&#9</PRE>resources：资源及配置文件<br/>
-      <PRE>&#9</PRE><PRE>&#9</PRE><PRE>&#9</PRE>mybatis：mybatis相关配置及mapper文件<br/>
-      <PRE>&#9</PRE><PRE>&#9</PRE><PRE>&#9</PRE>templates：thymeleaf模板<br/>
-      <PRE>&#9</PRE><PRE>&#9</PRE><PRE>&#9</PRE>application.properties：spring boot配置文件<br/>
-  <PRE>&#9</PRE>test：测试程序<br/>
+  main：源码<br/>
+    java：java代码<br/>
+      beans：实体类<br/>
+      common：一些公用类，包括一些自定义异常，用于传递信息<br/>
+      configure：spring boot的java配置类<br/>
+      interceptor：拦截器<br/>
+      utils：工具类<br/>
+      controllor、service、dao三层建构web<br/>
+    resources：资源及配置文件<br/>
+      mybatis：mybatis相关配置及mapper文件<br/>
+      templates：thymeleaf模板<br/>
+      application.properties：spring boot配置文件<br/>
+  test：测试程序<br/>
