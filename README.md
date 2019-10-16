@@ -2,25 +2,25 @@
 一个web项目，实现在线判题系统。
 
 功能：<br/>
-实现了用户管理，需要登录，并且区分用户和管理员，管理员可以增加新的管理员账户，也可以增加题目，或删除题目。
-实现判题系统，将用户传入的代码传入编译执行，对比结果，判定对错。并保存其答题记录，方便用户查看、纠错。
+实现了用户管理，需要登录，并且区分用户和管理员，管理员可以增加新的管理员账户，也可以增加题目，或删除题目。<br/>
+实现判题系统，将用户传入的代码传入编译执行，对比结果，判定对错。并保存其答题记录，方便用户查看、纠错。<br/>
 
-工程结构：
-models：存储题目的模板代码，做提示功能，防止用户传参或返回类型出错。
-questions：存储每道题的题目描述。
-testCase：存储每道题目的测试用例
-pom.xml：管理maven
-src：源码
-  main：源码
-    java：java代码
-      beans：实体类
-      common：一些公用类，包括一些自定义异常，用于传递信息
-      configure：spring boot的java配置类
-      interceptor：拦截器
-      utils：工具类
-      controllor、service、dao三层建构web
-    resources：资源及配置文件
-      mybatis：mybatis相关配置及mapper文件
-      templates：thymeleaf模板
-      application.properties：spring boot配置文件
-  test：测试程序
+工程结构：<br/>
+models：存储题目的模板代码，做提示功能，防止用户传参或返回类型出错。<br/>
+questions：存储每道题的题目描述。<br/>
+testCase：存储每道题目的测试用例<br/>
+pom.xml：管理maven<br/>
+src：源码<br/>
+  <PRE>&#9</PRE>main：源码<br/>
+    <PRE>&#9</PRE><PRE>&#9</PRE>java：java代码<br/>
+      <PRE>&#9</PRE><PRE>&#9</PRE><PRE>&#9</PRE>beans：实体类<br/>
+      <PRE>&#9</PRE><PRE>&#9</PRE><PRE>&#9</PRE>common：一些公用类，包括一些自定义异常，用于传递信息<br/>
+      <PRE>&#9</PRE><PRE>&#9</PRE><PRE>&#9</PRE>configure：spring boot的java配置类<br/>
+      <PRE>&#9</PRE><PRE>&#9</PRE><PRE>&#9</PRE>interceptor：拦截器<br/>
+      <PRE>&#9</PRE><PRE>&#9</PRE><PRE>&#9</PRE>utils：工具类<br/>
+      <PRE>&#9</PRE><PRE>&#9</PRE><PRE>&#9</PRE>controllor、service、dao三层建构web<br/>
+    <PRE>&#9</PRE><PRE>&#9</PRE>resources：资源及配置文件<br/>
+      <PRE>&#9</PRE><PRE>&#9</PRE><PRE>&#9</PRE>mybatis：mybatis相关配置及mapper文件<br/>
+      <PRE>&#9</PRE><PRE>&#9</PRE><PRE>&#9</PRE>templates：thymeleaf模板<br/>
+      <PRE>&#9</PRE><PRE>&#9</PRE><PRE>&#9</PRE>application.properties：spring boot配置文件<br/>
+  <PRE>&#9</PRE>test：测试程序<br/>
