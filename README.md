@@ -18,6 +18,7 @@
 >>>>beans：实体类<br/>
 >>>>common：一些公用类，包括一些自定义异常，用于传递信息<br/>
 >>>>configure：spring boot的java配置类<br/>
+>>>>dynamic:动态加载和运行的相关类
 >>>>interceptor：拦截器<br/>
 >>>>utils：工具类<br/>
 >>>>controllor、service、dao三层建构web<br/>
