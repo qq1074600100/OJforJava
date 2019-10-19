@@ -55,11 +55,8 @@ public class OnlineJudgeService {
         String testCaseFileName = testCaseFile.getName();
         sources.put(testCaseFileName, source2TestCase);
         sources.put("Solution.java", content);
-        File testFile = new File(System.getProperty("user.dir"), "testCase\\Test.java");
-        String source2Test = IOUtils.readFile2String(testFile, "UTF-8");
-        sources.put(testFile.getName(), source2Test);
 
-        // 编译结果收集器
+        //编译结果收集器
         DiagnosticCollector<JavaFileObject> compileCollector = new DiagnosticCollector<>();
         Map<String, byte[]> bytecodes = DynamicLoader.compile(sources, compileCollector);
         //编译错误处理

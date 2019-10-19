@@ -27,20 +27,21 @@ public class ManagerService {
         Integer maxId = IOUtils.getMax(ids);
         Integer id = maxId + 1;
         File questionFile = new File(
-                "D:\\computerScience\\Web\\springBootDemo\\oj\\questions\\question" + id + ".txt");
+                "questions\\question" + id + ".txt");
         File modelFile = new File(
-                "D:\\computerScience\\Web\\springBootDemo\\oj\\models\\model" + id + ".java");
+                "models\\model" + id + ".java");
         File testCaseFile = new File(
-                "D:\\computerScience\\Web\\springBootDemo\\oj\\testCase\\TestCase" + id + ".java");
+                "testCase\\TestCase" + id + ".java");
         managerDao.insertQuestionInfo(
-                new QuestionInfoPath(id, questionFile.getAbsolutePath(), modelFile.getAbsolutePath()));
-        managerDao.insertTestCase(id, testCaseFile.getAbsolutePath());
+                new QuestionInfoPath(id, questionFile.getPath(), modelFile.getPath()));
+        managerDao.insertTestCase(id, testCaseFile.getPath());
         IOUtils.write2File(question, questionFile);
         IOUtils.write2File(model, modelFile);
         IOUtils.write2File(testCase, testCaseFile);
         return true;
     }
 
+    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT, rollbackFor = Throwable.class)
     public boolean deleteQuestionById(int id) {
         QuestionInfoPath questionInfoPath = questionDao.getQuestionInfoPathById(id);
         File questionFile = new File(questionInfoPath.getQuestionPath());
