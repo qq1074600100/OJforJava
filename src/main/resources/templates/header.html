@@ -3,7 +3,10 @@
 <title>Login</title>
 </head>
 <body>
-<div th:if="${session.user}" id="head">
+<div id="head1">
+    <a th:href="@{/}">首页</a>
+</div>
+<div th:if="${session.user}" id="head2">
     <label th:if="${session.isManager eq true}">管理员：</label>
     <label th:if="${session.isManager eq false}">用户：</label>
     <label th:text="${session.user}"></label>

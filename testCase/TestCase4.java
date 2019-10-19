@@ -1,10 +1,15 @@
+import org.junit.Assert;
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 public class TestCase4 {
-    public static void main(String[] args) {
+    @Test
+    public void testSolute() throws Exception {
         Solution solution = new Solution();
         Map<List<Integer>, List<Integer>> datas = new HashMap<>();
         List<Integer> input1 = Arrays.asList(1, 2, 3);
@@ -19,33 +24,10 @@ public class TestCase4 {
         List<Integer> input4 = Arrays.asList(-1, -12, 3, 11, 111, 245, 10, 7, 8);
         List<Integer> output4 = Arrays.asList(-12, -1, 3, 7, 8, 10, 11, 111, 245);
         datas.put(input4, output4);
-        int count = 0;
-        long msOfRun = 0L;
-        for (Map.Entry<List<Integer>, List<Integer>> data : datas.entrySet()) {
-            long begin = System.currentTimeMillis();
-            List<Integer> rst = solution.solute(data.getKey());
-            long end = System.currentTimeMillis();
-            if (!rst.equals(data.getValue())) {
-                StringBuilder input = new StringBuilder();
-                for (Integer num : data.getKey()) {
-                    input.append(num + ",");
-                }
-                StringBuilder rstMsg = new StringBuilder();
-                for (Integer num : rst) {
-                    rstMsg.append(num + ",");
-                }
-                StringBuilder output = new StringBuilder();
-                for (Integer num : data.getValue()) {
-                    output.append(num + ",");
-                }
 
-                System.err.println("结果错误\n  输入:" + input
-                                   + "\n  输出:" + rstMsg + "\n  答案:" + output);
-                return;
-            }
-            msOfRun += end - begin;
-            count++;
+        for (List<Integer> key : datas.keySet()) {
+            List<Integer> rst = solution.solute(key);
+            Assert.assertEquals(rst, datas.get(key));
         }
-        System.out.println((msOfRun / count));
     }
 }

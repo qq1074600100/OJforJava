@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" charset="UTF-8">
-<title>Login</title>
+<html lang="en" charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+<title>Question</title>
 </head>
 <body>
-<div th:include="header::#head"></div>
+<div th:include="header::#head1"></div>
+<div th:include="header::#head2"></div>
 <form action="/addQuestion" method="post">
-    题目描述：<textarea name="question" cols="100" rows="20"></textarea><br>
-    模板：<textarea name="model" cols="100" rows="20"></textarea><br>
-    测试用例：<textarea name="testCase" cols="100" rows="20"></textarea><br>
+    题目描述：<br/><textarea name="question" cols="100" rows="10"></textarea><br>
+    模板：<br/><textarea name="model" cols="100" rows="10"></textarea><br>
+    测试用例：<br/><textarea name="testCase" cols="100" rows="20"></textarea><br>
 
     <input type="submit" value="添加">
 </form>

@@ -70,7 +70,10 @@ public class IOUtils {
 
     //将字符串换行转为HTML换行，便于前端显示
     public static String string2Html(String msg) {
-        return msg.replace("\n", "<br/>");
+        if (msg != null) {
+            return msg.replace("\n", "<br/>");
+        }
+        return null;
     }
 
     public static <T extends Comparable> T getMax(List<T> list) {

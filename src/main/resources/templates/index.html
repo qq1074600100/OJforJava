@@ -6,7 +6,7 @@
 <div th:if="${session.user eq null}">
     <a th:href="@{/login}">登录</a> <a th:href="@{/register}">注册</a>
 </div>
-<div th:include="header::#head"></div>
+<div th:include="header::#head2"></div>
 <h1>Questions</h1>
 <ul>
     <li th:each="questionInfo:${questionInfos}">

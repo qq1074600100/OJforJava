@@ -125,6 +125,7 @@ public class LoginControllor {
             //加入普通用户
             loginService.addUser(username, password, false);
             modelAndView.setViewName("login");
+            model.put("tipMsg", "注册成功，请登录");
         }
 
         return modelAndView;

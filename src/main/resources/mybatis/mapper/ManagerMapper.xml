@@ -12,8 +12,8 @@
         WHERE id=#{0}
     </delete>
     <insert id="insertQuestionInfo" parameterType="com.maple.oj.beans.QuestionInfoPath">
-        INSERT INTO questioninfo(id,questionPath, modelPath,testId)
-        VALUES (#{id},#{questionPath},#{modelPath},#{id})
+        INSERT INTO questioninfo(id,questionPath, modelPath,testId,aId)
+        VALUES (#{id},#{questionPath},#{modelPath},#{id},#{id})
     </insert>
     <insert id="insertTestCase">
         INSERT INTO testcase(testId, path)

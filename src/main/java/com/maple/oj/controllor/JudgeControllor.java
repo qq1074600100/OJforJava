@@ -4,6 +4,7 @@ import com.maple.oj.beans.QuestionInfo;
 import com.maple.oj.beans.User;
 import com.maple.oj.common.CodeRuntimeException;
 import com.maple.oj.common.CompileErrorException;
+import com.maple.oj.common.ResultReturnException;
 import com.maple.oj.common.TimeoutException;
 import com.maple.oj.service.LoginService;
 import com.maple.oj.service.OnlineJudgeService;
@@ -68,13 +69,11 @@ public class JudgeControllor {
             resultMsg = onlineJudgeService.judge(id, content, uId);
             if (resultMsg != null) {
                 model.put("answer", true);
-                model.put("error", resultMsg);
+                model.put("msg", IOUtils.string2Html(resultMsg));
             }
-        } catch (TimeoutException
-                | CompileErrorException
-                | CodeRuntimeException e) {
+        } catch (TimeoutException | CompileErrorException | CodeRuntimeException | ResultReturnException e) {
             model.put("answer", false);
-            model.put("error", IOUtils.string2Html(e.getMessage()));
+            model.put("msg", IOUtils.string2Html(e.getMessage()));
         }
         model.put("id", id);
         modelAndView.setViewName("result");

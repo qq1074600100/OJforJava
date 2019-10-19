@@ -30,6 +30,6 @@
         FROM answer,questioninfo
         WHERE answer.qId=questioninfo.id AND
               uId=#{0}
-        ORDER BY commitTime ASC
+        ORDER BY commitTime DESC
     </select>
 </mapper>

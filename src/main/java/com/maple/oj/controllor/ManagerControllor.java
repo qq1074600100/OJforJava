@@ -42,7 +42,7 @@ public class ManagerControllor {
                                     @ModelAttribute("testCase") String testCase) {
         managerService.addQuestion(question, model, testCase);
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("redirect:/");
+        modelAndView.setViewName("success");
         return modelAndView;
     }
 
@@ -51,7 +51,7 @@ public class ManagerControllor {
     public ModelAndView deleteQuestionById(@PathVariable("id") int id) {
         managerService.deleteQuestionById(id);
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("redirect:/");
+        modelAndView.setViewName("success");
         return modelAndView;
     }
 
@@ -94,7 +94,7 @@ public class ManagerControllor {
         } else {
             //添加管理员
             loginService.addUser(username, password, true);
-            modelAndView.setViewName("redirect:/");
+            modelAndView.setViewName("success");
         }
 
         return modelAndView;
